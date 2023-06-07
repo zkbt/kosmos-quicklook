@@ -1,3 +1,18 @@
+# a few extra things to watch out for
+sandbox/
+.vscode/settings.json
+.DS_Store
+*.mp4
+*.gif
+*.png
+*.pdf
+*.dat
+*.npy
+*.txt
+*.html
+*.h5
+*.xc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
