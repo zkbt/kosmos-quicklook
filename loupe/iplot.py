@@ -96,7 +96,6 @@ class iplot:
 
         # do all plot setup within figure display output
         with self.figure_output:
-
             # create the Axes with the right position and shape
             ax = plt.subplot(
                 self.gs[row : row + rowspan, col : col + colspan], **kwargs

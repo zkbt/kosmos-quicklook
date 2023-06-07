@@ -353,14 +353,12 @@ class loupe(iplot):
         self,
         message="",  # something to annouce each loop
     ):
-
         # update the plot
         # plt.draw()
 
         # keep track of whether we're finished
         self.notconverged = True
         while self.notconverged:
-
             # say the message at the start of each loop
             self.speak(message)
 
