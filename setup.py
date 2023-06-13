@@ -20,7 +20,7 @@ or
 `python setup.py install`
 
 ...upload the entire package to the Python Package Index, so that other folks
-will be able to install your package via the simple `pip install kosmos-quicklook`, by
+will be able to install your package via the simple `pip install kosmos-craftroom`, by
 running the following command:
 
 `python setup.py release`
@@ -43,7 +43,7 @@ if "release" in sys.argv[-1]:
     # uncomment the next line to test out on test.pypi.com/project/tess-zap
     # os.system("twine upload --repository-url https://test.pypi.org/legacy/ dist/*")
     os.system("twine upload dist/*")
-    os.system("rm -rf dist/kosmos-quicklook*")
+    os.system("rm -rf dist/kosmos-craftroom*")
     sys.exit()
 
 # a little kludge to get the version number from __version__
@@ -52,19 +52,19 @@ exec(open("loupe/version.py").read())
 # run the setup function
 setup(
     # the name folks can use to search for this with pip
-    name="kosmos-quicklook",
+    name="kosmos-craftroom",
     # what version of the code is this?
     version=__version__,
     # what's a short description of the package?
     description="Tools for working with spectroscopic light curves (of transiting exoplanets).",
     # what's a more detailed description?
-    long_description="Read the complete documentation at https://zkbt.github.io/kosmos-quicklook/",
+    long_description="Read the complete documentation at https://zkbt.github.io/kosmos-craftroom/",
     # who's the main author?
     author="Zach Berta-Thompson",
     # what's the main author's email?
     author_email="zach.bertathompson@colorado.edu",
     # what's the URL for the repository?
-    url="https://github.com/zkbt/kosmos-quicklook/",
+    url="https://github.com/zkbt/kosmos-craftroom/",
     # this figures out what subdirectories to include
     packages=find_packages(),
     # are there data that should be accessible when installed?
@@ -93,7 +93,7 @@ setup(
     ],
     # what version of Python is required?
     python_requires=">=3.7",  # f-strings are introduced in 3.6!
-    # requirements in `key` will install with `pip install kosmos-quicklook[key]`
+    # requirements in `key` will install with `pip install kosmos-craftroom[key]`
     extras_require={
         "develop": [
             "pytest",

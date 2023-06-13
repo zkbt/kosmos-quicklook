@@ -129,23 +129,7 @@ class loupe(iplot):
         # show the transpose of the image in imshow
         return np.transpose(self.image)
 
-    def one(self, image, **kwargs):
-        """
-        For compatiability with other craftroom displays,
-        this will display a single image in a loupe.
-
-        Parameters
-        ----------
-        image : 2D array
-            the image to display
-
-        **kwargs will be passed on to loupe setup
-        """
-
-        # for compatibility with ds9
-        self.setup(image, **kwargs)
-
-    def updateImage(self, image, **kwargs):
+    def update(self, image, **kwargs):
         """
         Once the loupe has been set up,
         modify the image being shown
@@ -207,7 +191,7 @@ class loupe(iplot):
         """
         Initialize the loupe
         (this has a pretty big overhead,
-        so use "updateImage" if you can to update
+        so use "update_image" if you can to update
         the data being displayed)
         """
 
@@ -308,7 +292,7 @@ class loupe(iplot):
         self.ax["2d"].set_xlim(self.extent[0:2])
         self.ax["2d"].set_ylim(self.extent[2:4])
 
-        # add crosshair
+        # add crosshair, to both 2D and 1D slices
         crosskw = dict(alpha=0.5, color=crosshaircolor, linewidth=1)
         self.plotted["crossy"] = self.ax["2d"].axvline(self.crosshair["x"], **crosskw)
         self.plotted["crossyextend"] = self.ax["slicex"].axvline(

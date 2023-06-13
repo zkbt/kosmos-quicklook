@@ -49,7 +49,7 @@ class iplot:
         # create the figure
         plt.ioff()
         self.figure = plt.figure(figsize=figsize, constrained_layout=False)
-        self.figure.canvas.toolbar_position = "left"
+        self.figure.canvas.toolbar_position = "bottom"
 
         # create the gridspec object
         self.gs = gridspec.GridSpec(n_rows, n_cols, figure=self.figure, **kwargs)
@@ -58,6 +58,7 @@ class iplot:
         self.axes = {}
 
     def display(self):
+        """ """
         display(
             widgets.AppLayout(
                 header=None,
@@ -72,6 +73,9 @@ class iplot:
         return f"Interactive{self.gs}"
 
     def speak(self, x):
+        """
+        Print text into the display.
+        """
         with self.text_output:
             self.text_output.clear_output()
             print(x)
