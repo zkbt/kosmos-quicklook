@@ -47,7 +47,7 @@ if "release" in sys.argv[-1]:
     sys.exit()
 
 # a little kludge to get the version number from __version__
-exec(open("loupe/version.py").read())
+exec(open("kosmos/version.py").read())
 
 # run the setup function
 setup(
@@ -89,7 +89,7 @@ setup(
         "ipywidgets",
         "tqdm",
         "specreduce",
-        "",
+        "pyperclip",
     ],
     # what version of Python is required?
     python_requires=">=3.7",  # f-strings are introduced in 3.6!
