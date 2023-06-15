@@ -17,7 +17,7 @@ plugins:
       default_handler: python
       handlers:
         python:
-          paths: [../kosmos]
+          paths: [../kosmoscraftroom]
           selection:
             docstring_style: "numpy"
           rendering:

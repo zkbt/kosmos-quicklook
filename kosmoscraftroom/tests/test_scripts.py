@@ -1,4 +1,4 @@
-from kosmos.scripts import *
+from kosmoscraftroom.scripts import *
 
 
 def test_basic_calibration_script():

@@ -47,7 +47,7 @@ if "release" in sys.argv[-1]:
     sys.exit()
 
 # a little kludge to get the version number from __version__
-exec(open("kosmos/version.py").read())
+exec(open("kosmoscraftroom/version.py").read())
 
 # run the setup function
 setup(

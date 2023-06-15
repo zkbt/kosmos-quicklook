@@ -1,4 +1,4 @@
-from kosmos.catalogs import *
+from kosmoscraftroom.catalogs import *
 import os
 
 
