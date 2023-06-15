@@ -2,6 +2,8 @@ site_name: kosmos-craftroom
 site_url: https://zkbt.github.com/kosmos-craftroom
 nav:
     - Welcome: index.md
+    - installation.ipynb
+    - catalogs.ipynb
     - scripting.ipynb
 theme:
   name: "material"
@@ -37,6 +39,9 @@ plugins:
         - "*.pdf"
         - "*.fits"
         - "*.npy"
+        - "acquiring.ipynb"
+        - "quicklook.ipynb"
+        - "signal-to-noise.ipynb"
 markdown_extensions:
     - toc:
         permalink: "#"
