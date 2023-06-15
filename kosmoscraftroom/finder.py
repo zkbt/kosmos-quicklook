@@ -2,16 +2,38 @@ from thefriendlystars import *
 from astropy.time import Time
 from ipywidgets import Output, AppLayout
 
-# def propagate_proper_motions(stars, epoch):
+
+def propagate_proper_motions(stars, epoch="now"):
+    if epoch == "now":
+        epoch = Time.now().decimalyear
+
+    from copy import deepcopy
+
+    propagated = deepcopy(stars)
+    original_epoch = stars.meta["epoch"]
+
+    dt = (epoch - stars.meta["epoch"]) * u.year
+    propagated["ra"] = stars["ra"] + dt * stars["pmra"] / np.cos(stars["dec"])
+    propagated["dec"] = stars["dec"] + dt * stars["pmdec"]
+    propagated.meta["epoch"] = epoch
+
+    dra = (propagated["ra"] - stars["ra"]) * np.cos(stars["dec"])
+    ddec = propagated["dec"] - stars["dec"]
+    motion = np.sqrt(dra**2 + ddec**2).to(u.arcsec)
+
+    print(
+        f"""
+    Propagating proper motions from {original_epoch:.2f} (catalog) to {epoch:.2f} (requested).
+    The largest motion was {np.max(motion):.3g}; the median was {np.median(motion):.3g}.
+    """
+    )
+    return propagated
 
 
 class Finder:
-    def __init__(self, name, **kwargs):
+    def __init__(self, name, epoch="now", **kwargs):
         self.stars_at_gaia_epoch = get_gaia(name, **kwargs)
-        current_epoch = Time.now().decimalyear
-        self.stars = (
-            self.stars_at_gaia_epoch
-        )  # propagate_proper_motions(self.stars_at_gaia_epoch, current_epoch)
+        self.stars = propagate_proper_motions(self.stars_at_gaia_epoch, epoch=epoch)
 
     def plot(self, **kwargs):
         plot_gaia(self.stars, **kwargs)
@@ -20,9 +42,10 @@ class Finder:
         self,
         filter="G_gaia",
         faintest_magnitude_to_show=20,
-        faintest_magnitude_to_label=16,
+        faintest_magnitude_to_label=15,
         size_of_zero_magnitude=100,
         unit=u.arcmin,
+        **kwargs,
     ):
         """
         Plot a finder chart using results from `get_gaia_data`.
@@ -74,7 +97,13 @@ class Finder:
 
             # plot the stars
             plt.scatter(
-                dra, ddec, s=marker_size, color="black", picker=True, pickradius=5
+                dra,
+                ddec,
+                s=marker_size,
+                color="black",
+                picker=True,
+                pickradius=5,
+                **kwargs,
             )
             plt.xlabel(
                 rf"$\Delta$(Right Ascension) [{unit}] relative to {center.ra.to_string(u.hour, format='latex', precision=2)}"
@@ -82,6 +111,7 @@ class Finder:
             plt.ylabel(
                 rf"$\Delta$(Declination) [{unit}] relative to {center.dec.to_string(u.deg, format='latex', precision=2)}"
             )
+            plt.title(f'{self.stars.meta["epoch"]:.2f}')
 
             # add labels
             filter_label = filter.split("_")[0]
@@ -230,3 +260,10 @@ class Finder:
 
             # display(fig.canvas)
             # display(o)
+
+    def show_lightcurves(self):
+        from lightkurve import search_lightcurve
+
+        lcs = search_lightcurve(x)
+        lc = lcs[-1].download()
+        lc.normalize().plot()
