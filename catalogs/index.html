@@ -1680,8 +1680,8 @@ tiny.from_table(table)</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1701,9 +1701,11 @@ tiny.from_table(table)</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">tiny</span><span class="o">.</span><span class="n">to_TUI</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">standards</span> <span class="o">=</span> <span class="n">TUICatalog</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;flux-calibrators&quot;</span><span class="p">)</span>
+<span class="n">standards</span><span class="o">.</span><span class="n">from_TUI</span><span class="p">(</span><span class="s2">&quot;standards.tui&quot;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt">tiny.to_TUI()</div>
+<div id="cell-5" class="clipboard-copy-txt">standards = TUICatalog(name="flux-calibrators")
+standards.from_TUI("standards.tui")</div>
     
         </div>
     </div>
@@ -1711,32 +1713,9 @@ tiny.from_table(table)</div>
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;&#39;random-tiny-test&#39; TUICatalog (3 targets)&gt; has been saved to random-tiny-test.tui
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1756,43 +1735,9 @@ tiny.from_table(table)</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">another_tiny</span> <span class="o">=</span> <span class="n">TUICatalog</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;another-tiny-test&quot;</span><span class="p">)</span>
-<span class="n">another_tiny</span><span class="o">.</span><span class="n">from_TUI</span><span class="p">(</span><span class="s2">&quot;random-tiny-test.tui&quot;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">standards</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">another_tiny = TUICatalog(name="another-tiny-test")
-another_tiny.from_TUI("random-tiny-test.tui")</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-7">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">another_tiny</span>
-</pre></div>
-<div id="cell-7" class="clipboard-copy-txt">another_tiny</div>
+<div id="cell-6" class="clipboard-copy-txt">standards</div>
     
         </div>
     </div>
@@ -1810,13 +1755,13 @@ another_tiny.from_TUI("random-tiny-test.tui")</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;&#39;another-tiny-test&#39; TUICatalog (3 targets)&gt;</pre>
+<pre>&lt;&#39;flux-calibrators&#39; TUICatalog (67 targets)&gt;</pre>
 </div>
 
 </div>
@@ -1843,12 +1788,12 @@ another_tiny.from_TUI("random-tiny-test.tui")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-8">
+            <clipboard-copy for="cell-7">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -1867,7 +1812,7 @@ another_tiny.from_TUI("random-tiny-test.tui")</div>
 <span class="n">emission</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">emission_snr</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">]</span>
 <span class="n">reflection</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">reflection_snr</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt">from exoatlas import *
+<div id="cell-7" class="clipboard-copy-txt">from exoatlas import *
 
 
 # define some populations
@@ -1912,12 +1857,12 @@ reflection = e[e.reflection_snr() > 5]</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-9">
+            <clipboard-copy for="cell-8">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -1936,7 +1881,7 @@ reflection = e[e.reflection_snr() > 5]</div>
 <span class="n">r</span> <span class="o">=</span> <span class="n">TUICatalog</span><span class="p">(</span><span class="s2">&quot;reflection&quot;</span><span class="p">)</span>
 <span class="n">r</span><span class="o">.</span><span class="n">from_exoatlas</span><span class="p">(</span><span class="n">reflection</span><span class="p">)</span>
 </pre></div>
-<div id="cell-9" class="clipboard-copy-txt">n = TUICatalog("nearby")
+<div id="cell-8" class="clipboard-copy-txt">n = TUICatalog("nearby")
 n.from_exoatlas(nearby)
 
 e = TUICatalog("emission")
@@ -1958,12 +1903,12 @@ r.from_exoatlas(reflection)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-10">
+            <clipboard-copy for="cell-9">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -1975,7 +1920,7 @@ r.from_exoatlas(reflection)</div>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">r</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">n, e, r</div>
+<div id="cell-9" class="clipboard-copy-txt">n, e, r</div>
     
         </div>
     </div>
@@ -1993,7 +1938,7 @@ r.from_exoatlas(reflection)</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -2029,12 +1974,12 @@ r.from_exoatlas(reflection)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-11">
+            <clipboard-copy for="cell-10">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2047,7 +1992,7 @@ r.from_exoatlas(reflection)</div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">standards</span><span class="p">]:</span>
     <span class="n">x</span><span class="o">.</span><span class="n">to_TUI</span><span class="p">()</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt">for x in [n, e, r, standards]:
+<div id="cell-10" class="clipboard-copy-txt">for x in [n, e, r, standards]:
     x.to_TUI()</div>
     
         </div>
@@ -2069,15 +2014,12 @@ r.from_exoatlas(reflection)</div>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In [11], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> x <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> [n, e, r, <span class="ansi-yellow-bg">standards</span>]:
-<span class="ansi-green-intense-fg ansi-bold">      2</span>     x<span style="color: rgb(98,98,98)">.</span>to_TUI()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;standards&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;&#39;nearby&#39; TUICatalog (49 targets)&gt; has been saved to nearby.tui
+&lt;&#39;emission&#39; TUICatalog (242 targets)&gt; has been saved to emission.tui
+&lt;&#39;reflection&#39; TUICatalog (19 targets)&gt; has been saved to reflection.tui
+&lt;&#39;flux-calibrators&#39; TUICatalog (67 targets)&gt; has been saved to flux-calibrators.tui
+</pre>
 </div>
 </div>
 
@@ -2104,12 +2046,12 @@ Cell <span class="ansi-green-fg">In [11], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-12">
+            <clipboard-copy for="cell-11">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2122,7 +2064,7 @@ Cell <span class="ansi-green-fg">In [11], line 1</span>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">combined</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="n">r</span> <span class="o">+</span> <span class="n">standards</span>
 <span class="n">combined</span><span class="o">.</span><span class="n">to_human_friendly</span><span class="p">()</span>
 </pre></div>
-<div id="cell-12" class="clipboard-copy-txt">combined = n + e + r + standards
+<div id="cell-11" class="clipboard-copy-txt">combined = n + e + r + standards
 combined.to_human_friendly()</div>
     
         </div>
@@ -2144,15 +2086,9 @@ combined.to_human_friendly()</div>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In [12], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> combined <span style="color: rgb(98,98,98)">=</span> n <span style="color: rgb(98,98,98)">+</span> e <span style="color: rgb(98,98,98)">+</span> r <span style="color: rgb(98,98,98)">+</span> <span class="ansi-yellow-bg">standards</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> combined<span style="color: rgb(98,98,98)">.</span>to_human_friendly()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;standards&#39; is not defined</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Human-friendly catalog (377 targets) has been saved to nearby+emission+reflection+flux-calibrators.txt
+</pre>
 </div>
 </div>
 
