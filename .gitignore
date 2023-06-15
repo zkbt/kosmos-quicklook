@@ -1,4 +1,6 @@
 # a few extra things to watch out for
+*.tui
+
 sandbox/
 .vscode/settings.json
 .DS_Store
@@ -12,6 +14,7 @@ sandbox/
 *.html
 *.h5
 *.xc
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

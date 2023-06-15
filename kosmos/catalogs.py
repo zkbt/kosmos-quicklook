@@ -18,6 +18,10 @@ class TUICatalog:
         Initialize a catalog
         """
         self.name = name
+        self.table = []
+
+    def __repr__(self):
+        return f"<'{self.name}' TUICatalog ({len(self.table)} targets)>"
 
     def from_table(self, table, remove_duplicates=True, sort=True):
         """
@@ -118,7 +122,7 @@ class TUICatalog:
             with open(filename, "r") as f:
                 print(f.read())
 
-        print(f"TUI catalog ({len(self.table)} targets) has been saved to {filename}")
+        print(f"{self} has been saved to {filename}")
 
     def to_human_friendly(self, output=False):
         """
