@@ -51,6 +51,21 @@ class ScriptWriter:
         print(f" {self.binning_string()}")
         print()
 
+        print("Before running this script, check in the KOSMOS window:")
+        print(
+            """'
+        disperser can be anything
+        slit can be anything
+        filter1 must be empty
+        filter2 must be empty
+        calibration stage can be anything
+        binning can be anything
+        neon/krypton/argon/quartz can be anything
+        """
+        )
+        self.comment(f"set binning to {self.binning_string()}")
+        self.say(f"kosmos set rowBin={self.binning[0]} colBin={self.binning[1]}")
+
     def __repr__(self):
         return f"<KOSMOS script for {len(self.dispersers)} dispersers + {len(self.slits)} slits>"
 

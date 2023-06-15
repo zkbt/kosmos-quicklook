@@ -5,6 +5,10 @@ nav:
     - installation.ipynb
     - acquiring.ipynb
     - scripting.ipynb
+    - log.ipynb
+    - signal-to-noise.ipynb
+    - quicklook.ipynb
+
 theme:
   name: "material"
   features:
@@ -39,9 +43,6 @@ plugins:
         - "*.pdf"
         - "*.fits"
         - "*.npy"
-        - "acquiring.ipynb"
-        - "quicklook.ipynb"
-        - "signal-to-noise.ipynb"
         - "exoatlas-downloads"
 markdown_extensions:
     - toc:
