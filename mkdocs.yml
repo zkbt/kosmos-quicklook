@@ -3,8 +3,8 @@ site_url: https://zkbt.github.com/kosmos-craftroom
 nav:
     - Welcome: index.md
     - installation.ipynb
-    - catalog.ipynb
-    - acquiring.ipynb
+    - catalogs.ipynb
+    - finders.ipynb
     - scripting.ipynb
     - log.ipynb
     - signal-to-noise.ipynb
