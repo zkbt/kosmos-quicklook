@@ -14,13 +14,13 @@ If this isn't the case, we recommend installing the [Anaconda Python distributio
 
 If you want to install into your current environment, the basic installation should be pretty simple. From the Terminal or Anaconda Prompt, please run
 ```
-pip install git+https://github.com/zkbt/kosmos-craftroom
+pip install https://github.com/zkbt/kosmos-craftroom
 ```
 and it should install everything, along with all the necessary dependencies.
 
 If you previously installed this package and need to grab a newer version, run
 ```
-pip install --upgrade git+https://github.com/zkbt/kosmos-craftroom
+pip install --upgrade https://github.com/zkbt/kosmos-craftroom
 ```
 to download any officially released updates.
 
