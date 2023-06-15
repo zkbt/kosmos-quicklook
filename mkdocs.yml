@@ -3,7 +3,7 @@ site_url: https://zkbt.github.com/kosmos-craftroom
 nav:
     - Welcome: index.md
     - installation.ipynb
-    - catalogs.ipynb
+    - acquiring.ipynb
     - scripting.ipynb
 theme:
   name: "material"
@@ -42,6 +42,7 @@ plugins:
         - "acquiring.ipynb"
         - "quicklook.ipynb"
         - "signal-to-noise.ipynb"
+        - "exoatlas-downloads"
 markdown_extensions:
     - toc:
         permalink: "#"

@@ -1,4 +1,4 @@
-# kosmos-craftoom
+# kosmos-craftroom
 A cheerful mess of tools for working with the KOSMOS spectrograph at APO.
 
 # Documentation
