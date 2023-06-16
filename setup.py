@@ -91,6 +91,7 @@ setup(
         # "specreduce",
         "pyperclip",
         "thefriendlystars>=0.1.2",
+        "illumination>=0.1.0",
     ],
     # what version of Python is required?
     python_requires=">=3.7",  # f-strings are introduced in 3.6!
